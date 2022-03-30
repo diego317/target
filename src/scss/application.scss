@@ -2,13 +2,22 @@
 
 @use 'margins';
 
+@use 'variables/colors';
+
+@use 'variables/fonts';
+
+@use 'texts';
+
 @use 'components';
+
+@import 'variables/fonts';
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 * {
+  font-family: $app-font;
   margin: 0;
 }
 
@@ -16,9 +25,14 @@ html, body {
   height: 100%;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
 
 img, picture, video, canvas, svg {
@@ -36,4 +50,5 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+  height: 100%;
 }
