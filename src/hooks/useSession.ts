@@ -1,9 +1,9 @@
-import { useSelector, shallowEqual } from 'react-redux';
-import { RootState } from 'state/reducers';
+import { shallowEqual } from 'react-redux';
+import { useAppSelector } from './redux';
 
 const useSession = () =>
-  useSelector(
-    ({ session: { authenticated, accessToken } }: RootState) => ({
+  useAppSelector(
+    ({ session: { authenticated, accessToken } }) => ({
       authenticated,
       accessToken
     }),
