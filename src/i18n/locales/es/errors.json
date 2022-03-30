@@ -1,0 +1,8 @@
+{
+  "validators": {
+    "required": "Este campo es requerido",
+    "passwordConfirmation": "Las contrasenas no coinciden",
+    "minLength": "El tamaño minimo es {{number}} caracteres",
+    "email": "Correo electrónico inválido"
+  }
+}

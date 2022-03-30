@@ -1,0 +1,28 @@
+{
+  "title": "REGISTRO",
+  "fields": {
+    "name": {
+      "title": "NOMBRE"
+    },
+    "email": {
+      "title": "CORREO ELECTRONICO"
+    },
+    "password": {
+      "title": "CONTRASEÑA",
+      "placeholder": "MIN. 6 CARACTERES"
+    },
+    "confirmPassword": {
+      "title": "CONFIRMAR CONTRASEÑA"
+    },
+    "gender": {
+      "title": "GENERO",
+      "placeholder": "SELECCIONE SU GENERO"
+    }
+  },
+  "button": {
+    "signUp": "REGISTRAR"
+  },
+  "link": {
+    "login": "INICIA SESION"
+  }
+}

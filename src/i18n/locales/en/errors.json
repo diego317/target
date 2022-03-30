@@ -1,0 +1,8 @@
+{
+  "validators": {
+    "required": "This field is required",
+    "passwordConfirmation": "Passwords do not match",
+    "minLength": "Must be at least {{number}} characters long",
+    "email": "Invalid email addres"
+  }
+}
