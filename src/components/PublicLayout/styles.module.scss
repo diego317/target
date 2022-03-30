@@ -1,0 +1,124 @@
+.publicLayoutContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+  position: relative;
+
+  & .nav {
+    left: 20px;
+    position: absolute;
+    top: 28px;
+
+    & .button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      & .buttonIcon {
+        position: relative;
+  
+        &,
+        &::after,
+        &::before {
+          background-color: var(--color-black);
+          display: inline-block;
+          height: 2.25px;
+          width: 20.25px;
+        }
+  
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          transition: all .2s;
+        }
+  
+        &::before {
+          top: 5px;
+        }
+  
+        &::after {
+          bottom: 5px;
+        }
+
+        &.open {
+          background-color: transparent;
+
+          &::after {
+            transform: rotate(135deg);
+            top: 0;
+          }
+
+          &::before {
+            transform: rotate(-135deg);
+            top: 0;
+          }
+        }
+      }
+    }
+
+    & .menu {
+      bottom: 15px;
+      left: 40px;
+      position: relative;
+      visibility: hidden;
+      width: 200px;
+
+      & .text {
+        line-height: 16.41px;
+        letter-spacing: 2.1px;
+      }
+
+      &.show {
+        visibility: visible;
+      }
+    }
+  }
+
+  & .aside {
+    background-color: var(--color-dodger-blue);
+
+    & .imageContainer {
+      justify-items: center;
+      display: grid;
+      column-gap: 30px;
+      grid-template-areas:
+        "iphone iphone"
+        "app app"
+        "facebook twitter";
+      grid-template-columns: minmax(50px, 250px) minmax(50px, 250px);
+      height: 100%;
+      place-content: center;
+      position: relative;
+
+      & img:nth-child(1) {
+        grid-area: iphone;
+      }
+
+      & img:nth-child(2) {
+        grid-area: app;
+        margin-top: -50px;
+      }
+
+      & img:nth-child(3) {
+        grid-area: facebook;
+        justify-self: end;
+      }
+
+      & img:nth-child(4) {
+        grid-area: twitter;
+        justify-self: start;
+      }
+
+      & img:nth-child(5) {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25px, -25px);
+      }
+    }
+  }
+}

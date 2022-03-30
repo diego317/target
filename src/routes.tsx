@@ -1,17 +1,25 @@
 import React from 'react';
 
 import routesPaths from 'constants/routesPaths';
+import PublicLayout from 'components/PublicLayout';
+import SignUp from 'pages/SignUp';
 import Login from 'pages/Login';
 
 const routes = [
   {
     path: routesPaths.index,
-    children: <Login />,
-    privateRoute: true
-  },
-  {
-    path: routesPaths.login,
-    children: <Login />
+    children: <PublicLayout />,
+    privateRoute: false,
+    subPaths: [
+      {
+        path: routesPaths.signUp,
+        element: <SignUp />
+      },
+      {
+        path: routesPaths.login,
+        element: <Login />
+      }
+    ]
   },
 ];
 
