@@ -18,7 +18,7 @@ function SimpleSelect<IFormValues>({
     <div className={clsx(styles.simpleSelectContainer, "column", className)}>
       <label 
         htmlFor={name} 
-        className={clsx(styles.label, "text-normal center m-bottom-1")}
+        className="text-normal center m-bottom-1"
       >
         {title}
       </label>
