@@ -22,7 +22,7 @@ function SignUp() {
 
   const { status, error } = useStatus(signUp);
 
-  const handleSubmit: SubmitHandler<SignUpFields> = async (data) => {
+  const handleSubmit: SubmitHandler<SignUpFields> = (data) => {
     dispatch(signUp(data));
   }
 
@@ -36,7 +36,7 @@ function SignUp() {
   return (
     <div className={clsx("column center middle", styles.signUpContainer)} >
       <SignUpForm onSubmit={handleSubmit} error={error?.message}/>
-      <Link to="/login" className={clsx(styles.link, "text-normal medium")}>{t('link.login')}</Link>
+      <Link to={`/${routesPaths.login}`} className={clsx(styles.link, "text-normal medium")}>{t('link.login')}</Link>
       {loading && <Spinner />}
     </div>
   )

@@ -76,7 +76,7 @@ function SignUpForm({ onSubmit, error }: SignUpFormProps) {
         placeholder={t('signUp:fields.gender.placeholder')}
         error={errors.gender}
       />
-      <button className="button">{t('signUp:button.signUp')}</button>
+      <button className="button">{t('signUp:buttons.signUp')}</button>
       <p className="text-error italic center">{error}</p>
     </form>
   )

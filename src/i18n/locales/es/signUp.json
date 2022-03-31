@@ -24,7 +24,7 @@
       }
     }
   },
-  "button": {
+  "buttons": {
     "signUp": "REGISTRAR"
   },
   "link": {
