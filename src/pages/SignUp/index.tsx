@@ -10,7 +10,7 @@ import SignUpForm from './components/SignUpForm';
 import { useAppDispatch } from 'hooks/redux';
 import useStatus from 'hooks/useStatus';
 import routesPaths from 'constants/routesPaths';
-import { FULFILLED } from 'constants/actionStatus';
+import { FULFILLED, PENDING } from 'constants/actionStatus';
 import { SignUpFields } from 'types/forms';
 import styles from './styles.module.scss';
 
@@ -23,15 +23,14 @@ function SignUp() {
   const { status, error } = useStatus(signUp);
 
   const handleSubmit: SubmitHandler<SignUpFields> = async (data) => {
-    setLoading(true)
-    await dispatch(signUp(data));
-    setLoading(false)
+    dispatch(signUp(data));
   }
 
   useEffect(() => {
     if (status === FULFILLED) {
       navigate(`/${routesPaths.login}`);
     }
+    setLoading(status === PENDING);
   }, [navigate, status])
 
   return (

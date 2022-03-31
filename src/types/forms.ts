@@ -1,8 +1,9 @@
-enum GenderEnum {
+export enum GenderEnum {
   female = "female",
   male = "male",
   other = "other"
 }
+
 export interface SignUpFields {
   username: string;
   email: string;

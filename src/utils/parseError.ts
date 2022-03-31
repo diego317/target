@@ -1,3 +1,5 @@
+import i18n from 'i18n';
+
 const parseErrors = (errors: any) => {
   if (errors) {
     const { fullMessages, base } = errors;
@@ -21,11 +23,11 @@ const parseErrors = (errors: any) => {
     return `${errorKey} ${error}`;
   }
 
-  return 'Something went wrong';
+  return i18n.t('errors:response.default');
 };
 
 const bodyParser = (data: any) => {
-  if (!data) return 'Something went wrong';
+  if (!data) return i18n.t('errors:response.default');
 
   const { error, errors } = data;
 

@@ -16,7 +16,12 @@
     },
     "gender": {
       "title": "GENERO",
-      "placeholder": "SELECCIONE SU GENERO"
+      "placeholder": "SELECCIONE SU GENERO",
+      "options": {
+        "male": "Hombre",
+        "female": "Mujer",
+        "other": "Otro"
+      }
     }
   },
   "button": {

@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import TextField from 'components/TextField';
 import SimpleSelect from 'components/SimpleSelect';
 import { SignUpFields } from 'types/forms';
+import { genderOptions } from 'pages/SignUp/constants';
 import { emailPattern, minLengthPassword } from 'constants/formValidations';
 import styles from './styles.module.scss';                           
 
@@ -70,7 +71,7 @@ function SignUpForm({ onSubmit, error }: SignUpFormProps) {
         validations={{ required: t('errors:validators.required') }}
         name="gender"
         title={t('signUp:fields.gender.title')}
-        options={[{ value: "male", label: "Male" }, { value: "female", label: "Female" }, { value: "other", label: "Other" }]} 
+        options={genderOptions} 
         className="m-bottom-7"
         placeholder={t('signUp:fields.gender.placeholder')}
         error={errors.gender}

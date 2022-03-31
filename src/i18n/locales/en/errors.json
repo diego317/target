@@ -1,4 +1,7 @@
 {
+  "response": {
+    "default": "Something went wrong"
+  },
   "validators": {
     "required": "This field is required",
     "passwordConfirmation": "Passwords do not match",
