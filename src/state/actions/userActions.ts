@@ -1,13 +1,13 @@
 import { createAsyncThunk, createAction } from '@reduxjs/toolkit';
 
 import userService from 'services/userService';
-import { SignUpFields } from 'types/forms';
+import { SignUpFields, LoginFields } from 'types/forms';
 import parseError from 'utils/parseError';
 
-export const login = createAsyncThunk('user/login', async (user: any) => {
+export const login = createAsyncThunk('user/login', async (user: LoginFields) => {
   try {
-    const { data: token } = await userService.login(user);
-    return token;
+    const { data } = await userService.login(user);
+    return data;
   } catch ({ response: { data } }) {
     throw parseError(data);
   }
@@ -30,7 +30,7 @@ export const signUp = createAsyncThunk('user/signUp', async (user: SignUpFields)
   }
 });
 
-export const updateSession = createAction<object | undefined>('session/update');
+export const updateSession = createAction<{ accessToken: string }>('session/update');
 
 export const { fulfilled: loginFulfilled } = login;
 export const { fulfilled: logoutFulfilled } = logout;

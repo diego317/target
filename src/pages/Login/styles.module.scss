@@ -1,0 +1,18 @@
+.loginContainer {
+  height: 100%;
+  margin: 0 auto;
+  width: 321px;
+
+  & .subtitle {
+    line-height: 32px;
+  }
+
+  & .body {
+    line-height: 26px;
+  }
+
+  & .forgotLink {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
