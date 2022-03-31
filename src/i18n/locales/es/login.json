@@ -1,0 +1,21 @@
+{
+  "title": "TARGET MVD",
+  "subtitle": "Encuentra personas cerca tuyo y conectate",
+  "body": "Crea un objetivo en cualquier lugar del mapa, especifica tu interés: Viajes, Citas, Música, etc. y empieza a conectar con otras personas que comparten tu interés",
+  "fields": {
+    "email": {
+      "title": "CORREO ELECTRÓNICO"
+    },
+    "password": {
+      "title": "CONTRASEÑA"
+    }
+  },
+  "buttons": {
+    "signIn": "INICIA SESIÓN"
+  },
+  "links": {
+    "forgotPassword": "Olvidaste tu contraseña",
+    "facebook": "CONECTAR CON FACEBOOK",
+    "signUp": "REGISTRATE"
+  }
+}
