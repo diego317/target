@@ -28,7 +28,7 @@ function Login() {
 
   useEffect(() => {
     if (status === FULFILLED) {
-      navigate(`${routesPaths.index}`);
+      navigate(routesPaths.home);
     }
     setLoading(status === PENDING);
   }, [navigate, status])
@@ -43,14 +43,14 @@ function Login() {
       </article>
       <LoginForm onSubmit={handleSubmit} error={error?.message}/>
       <Link 
-        to={routesPaths.index} 
+        to={routesPaths.landing} 
         className={clsx("m-bottom-11", styles.forgotLink)}
       >
         {t('links.forgotPassword')}
       </Link>
       <div className="title-small bold">{t('links.facebook')}</div>
       <hr className="hr"/>
-      <Link to={routesPaths.index} className="text-normal medium">{t('links.signUp')}</Link>
+      <Link to={routesPaths.signUp} className="text-normal medium">{t('links.signUp')}</Link>
       {loading && <Spinner />}
     </div>
   )

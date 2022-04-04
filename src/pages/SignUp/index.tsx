@@ -28,7 +28,7 @@ function SignUp() {
 
   useEffect(() => {
     if (status === FULFILLED) {
-      navigate(`/${routesPaths.login}`);
+      navigate(routesPaths.login);
     }
     setLoading(status === PENDING);
   }, [navigate, status])
@@ -37,7 +37,7 @@ function SignUp() {
     <div className={clsx("column center middle", styles.signUpContainer)} >
       <SignUpForm onSubmit={handleSubmit} error={error?.message}/>
       <hr className="hr"/>
-      <Link to={`/${routesPaths.login}`} className="text-normal medium">{t('link.login')}</Link>
+      <Link to={routesPaths.login} className="text-normal medium">{t('link.login')}</Link>
       {loading && <Spinner />}
     </div>
   )

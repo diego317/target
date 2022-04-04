@@ -66,8 +66,8 @@
       width: 200px;
 
       & .text {
-        line-height: 16.41px;
         letter-spacing: 2.1px;
+        line-height: 16.41px;
       }
 
       &.show {
@@ -80,15 +80,15 @@
     background-color: var(--color-dodger-blue);
 
     & .imageContainer {
-      justify-items: center;
-      display: grid;
       column-gap: 30px;
+      display: grid;
       grid-template-areas:
         "iphone iphone"
         "app app"
         "facebook twitter";
       grid-template-columns: minmax(50px, 250px) minmax(50px, 250px);
       height: 100%;
+      justify-items: center;
       place-content: center;
       position: relative;
 
@@ -112,12 +112,12 @@
       }
 
       & img:nth-child(5) {
-        width: 50px;
         height: 50px;
+        left: 50%;
         position: absolute;
         top: 50%;
-        left: 50%;
         transform: translate(-25px, -25px);
+        width: 50px;
       }
     }
   }

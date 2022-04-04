@@ -1,15 +1,15 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
-import routes from 'constants/routesPaths';
+import routesPaths from 'constants/routesPaths';
 
 function PrivateRoute({ authenticated, privateRoute, children }: PrivateRouteProps) {
   const location = useLocation();
 
   if (privateRoute) {
-    return authenticated ? children : <Navigate to={routes.login} state={{ from: location }} replace />
+    return authenticated ? children : <Navigate to={routesPaths.login} state={{ from: location }} replace />
   }
 
-  return children
+  return !authenticated ? children : <Navigate to={routesPaths.home} state={{ from: location }} replace />
 };
 
 export interface PrivateRouteProps {

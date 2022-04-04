@@ -25,6 +25,7 @@ const App = () => {
                 </PrivateRoute>
               } 
             >
+              {!!subPaths?.length && <Route index element={subPaths[0].element}/>}
               {subPaths?.map(({ path, element}) => <Route key={path} path={path} element={element}/>)}
             </Route >
           ))}

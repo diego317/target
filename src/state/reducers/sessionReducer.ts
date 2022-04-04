@@ -23,7 +23,6 @@ const initialState: SessionState = {
 }
 
 const handleLoginFulfilled = (state: SessionState, { payload: { data } }: PayloadAction<loginResponse>) => {
-  console.log(data)
   state.user.uid = data.uid;
   state.user.email = data.email;
   state.user.username = data.username;
