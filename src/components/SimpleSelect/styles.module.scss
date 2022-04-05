@@ -1,0 +1,11 @@
+.simpleSelectContainer {
+  & .label {
+    letter-spacing: 1.65px;
+    line-height: 13px;
+  }
+
+  & .input {
+    height: 37px;
+    text-align: center;
+  }
+}

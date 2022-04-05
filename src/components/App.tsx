@@ -15,11 +15,18 @@ const App = () => {
       </Helmet>
       <BrowserRouter>
         <Routes>
-          {routes.map(({ children, path, privateRoute}, index) => (
-            <Route key={`route${index}`} path={path} element={
-              <PrivateRoute privateRoute={privateRoute} authenticated={authenticated}>
-                {children}
-              </PrivateRoute>}/>
+          {routes.map(({ children, path, privateRoute, subPaths}, index) => (
+            <Route 
+              key={`route${index}`} 
+              path={path} 
+              element={
+                <PrivateRoute privateRoute={privateRoute} authenticated={authenticated}>
+                  {children}
+                </PrivateRoute>
+              } 
+            >
+              {subPaths?.map(({ path, element}) => <Route key={path} path={path} element={element}/>)}
+            </Route >
           ))}
         </Routes>
       </BrowserRouter>

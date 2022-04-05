@@ -2,7 +2,7 @@ import { ActionReducerMapBuilder, AsyncThunk, createReducer } from '@reduxjs/too
 
 import { FULFILLED, REJECTED, PENDING } from 'constants/actionStatus';
 
-export type GenericAsyncThunk = AsyncThunk<unknown, unknown, any>;
+export type GenericAsyncThunk = AsyncThunk<unknown, any, any>;
 type PendingAction = ReturnType<GenericAsyncThunk['pending']>;
 type RejectedAction = ReturnType<GenericAsyncThunk['rejected']>;
 type FulfilledAction = ReturnType<GenericAsyncThunk['fulfilled']>;
@@ -15,12 +15,14 @@ const getActionKey = (type: string) => {
   return types.join(DELIMITER);
 };
 
-export default createReducer({}, (builder: ActionReducerMapBuilder<any>) => {
+const initialState: Record<string, any> = {}
+
+export default createReducer(initialState, (builder: ActionReducerMapBuilder<any>) => {
   builder
     .addMatcher(
       (action): action is RejectedAction => action.type.endsWith(`/${REJECTED}`),
-      (state, { type, payload }) => {
-        state[getActionKey(type)] = { status: REJECTED, error: payload || undefined };
+      (state, { type, error }) => {
+        state[getActionKey(type)] = { status: REJECTED, error: error || undefined };
       },
     )
     .addMatcher(

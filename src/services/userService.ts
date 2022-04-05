@@ -1,9 +1,9 @@
 import httpClient from 'httpClient';
 import { ENDPOINTS } from 'httpClient/constants';
-import User from 'types/user';
+import { SignUpFields } from 'types/forms';
 
 class UserService {
-  static login(user: User) {
+  static login(user: any) {
     return httpClient.post(ENDPOINTS.login, user);
   }
 
@@ -11,8 +11,8 @@ class UserService {
     return httpClient.delete(ENDPOINTS.logout);
   }
 
-  static signUp(user: User) {
-    return httpClient.post(ENDPOINTS.signup, user);
+  static signUp(user: SignUpFields) {
+    return httpClient.post(ENDPOINTS.signup, { user });
   }
 }
 

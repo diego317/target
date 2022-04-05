@@ -1,0 +1,13 @@
+.signUpForm {
+  width: 180px;
+  position: relative;
+
+  &::after {
+    border-bottom: 1px solid black;
+    bottom: -18px;
+    content: '';
+    left: 30px;
+    position: absolute;
+    width: 121px;
+  }
+}

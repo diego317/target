@@ -1,0 +1,33 @@
+{
+  "title": "SIGN UP",
+  "fields": {
+    "name": {
+      "title": "NAME"
+    },
+    "email": {
+      "title": "EMAIL"
+    },
+    "password": {
+      "title": "PASSWORD",
+      "placeholder": "MIN. 6 CHARACTERS LONG"
+    },
+    "confirmPassword": {
+      "title": "CONFIRM PASSWORD"
+    },
+    "gender": {
+      "title": "GENDER",
+      "placeholder": "SELECT YOUR GENDER",
+      "options": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+      }
+    }
+  },
+  "buttons": {
+    "signUp": "SIGN UP"
+  },
+  "link": {
+    "login": "SIGN IN"
+  }
+}

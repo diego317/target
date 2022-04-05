@@ -1,0 +1,69 @@
+@import 'variables/fonts';
+
+%text-base {
+  color: var(--color-black);
+  font-family: $app-font;
+  font-weight: 400;
+
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+}
+
+.title-big {
+
+  @extend %text-base;
+  font-size: 2rem;
+}
+
+.title-normal {
+
+  @extend %text-base;
+  font-size: 1.8rem;
+}
+
+.title-small {
+
+  @extend %text-base;
+  font-size: 1.2rem;
+}
+
+.text-big {
+
+  @extend %text-base;
+  font-size: 1.4rem;
+}
+
+.text-normal {
+
+  @extend %text-base;
+  font-size: 1.1rem;
+}
+
+.text-error {
+
+  @extend %text-base;
+  font-size: 0.9rem;
+  color: var(--color-tia-maria);
+  height: 10px;
+}

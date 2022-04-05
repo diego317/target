@@ -1,0 +1,11 @@
+{
+  "response": {
+    "default": "Algo salió mal"
+  },
+  "validators": {
+    "required": "Este campo es requerido",
+    "passwordConfirmation": "Las contraseñas no coinciden",
+    "minLength": "El tamaño mínimo es {{number}} caracteres",
+    "email": "Correo electrónico inválido"
+  }
+}

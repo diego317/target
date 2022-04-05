@@ -5,7 +5,7 @@ export const ACCESS_TOKEN = 'access-token';
 export const UNAUTHORIZED = 401;
 
 export const ENDPOINTS = {
-  login: '/auth/signin',
-  logout: '/auth/signout',
-  signup: '/auth/signup',
+  login: '/users/sign_in',
+  logout: '/users/sign_out',
+  signup: '/users',
 }
