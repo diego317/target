@@ -12,7 +12,7 @@ import useStatus from 'hooks/useStatus';
 import routesPaths from 'constants/routesPaths';
 import { FULFILLED, PENDING } from 'constants/actionStatus';
 import { LoginFields } from 'types/forms';
-import { smiles } from 'assets/images'
+import { smiles } from 'assets/images';
 import styles from './styles.module.scss';
 
 function Login() {
