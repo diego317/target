@@ -53,8 +53,11 @@
     left: 10px;
     position: relative;
     visibility: hidden;
-    width: 200px;
     list-style: none;
+
+    & li:hover {
+      border-bottom: 2px solid var(--color-dodger-blue);
+    }
   
     & .link {
       letter-spacing: 2.1px;
@@ -64,6 +67,7 @@
     & .button {
       background-color: transparent;
       border: none;
+      cursor: pointer;
       letter-spacing: 2.1px;
       line-height: 16.41px;
       padding: 0;

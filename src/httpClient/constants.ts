@@ -8,4 +8,5 @@ export const ENDPOINTS = {
   login: '/users/sign_in',
   logout: '/users/sign_out',
   signup: '/users',
+  contact: '/questions'
 }

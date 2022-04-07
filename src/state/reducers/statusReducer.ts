@@ -1,6 +1,6 @@
 import { ActionReducerMapBuilder, AsyncThunk, createReducer } from '@reduxjs/toolkit';
 
-import { FULFILLED, REJECTED, PENDING } from 'constants/actionStatus';
+import { FULFILLED, REJECTED, PENDING, RESET } from 'constants/actionStatus';
 
 export type GenericAsyncThunk = AsyncThunk<unknown, any, any>;
 type PendingAction = ReturnType<GenericAsyncThunk['pending']>;
@@ -36,6 +36,14 @@ export default createReducer(initialState, (builder: ActionReducerMapBuilder<any
       (state, { type }) => {
         state[getActionKey(type)] = { status: PENDING };
       },
+    )
+    .addMatcher(
+      ({ type }) => type.endsWith(`/${RESET}`),
+      (state, { type }) => {
+
+        delete state[getActionKey(type)];
+        return state;
+      }
     )
     .addDefaultCase(() => {});
 });
