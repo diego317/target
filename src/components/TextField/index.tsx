@@ -9,25 +9,32 @@ function TextField<IFormValues>({
   title, 
   register,
   validations = {},
-  className = "", 
+  className = "",
+  classNameLabel = "",
+  classNameInput = "",
   type = "text",
   placeholder = "",
-  error
+  error,
+  tag,
+  disabled
 }: TextFieldProps<IFormValues>) {
+  const InputComponent = tag === 'textarea' ? 'textarea' : 'input'
+
   return (
     <div className={clsx(styles.textFieldContainer, "column", className)}>
       <label 
         htmlFor={name} 
-        className="text-normal center m-bottom-1"
+        className={clsx("text-normal center m-bottom-1", classNameLabel)}
       >
         {title}
       </label>
-      <input 
+      <InputComponent 
         id={name} 
         {...register(name, validations)}
-        className={styles.input} 
+        className={clsx(styles.input, classNameInput, { [styles.error]: error?.message })} 
         type={type}
         placeholder={placeholder}
+        disabled={disabled}
       />
       <p className="text-error italic">{error?.message}</p>
     </div>
@@ -40,7 +47,10 @@ export interface TextFieldProps<IFormValues> extends InputHTMLAttributes<HTMLInp
   register: UseFormRegister<IFormValues>;
   validations?: RegisterOptions;
   className?: string;
+  classNameInput?: string;
+  classNameLabel?: string;
   error?: FieldError;
+  tag?: 'textarea' | 'input'
 }
 
 export default TextField;

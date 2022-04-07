@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
 
 import { i6, appStore, play } from 'assets/images';
@@ -7,8 +6,6 @@ import Menu from './components/Menu';
 import styles from './styles.module.scss';
 
 function PublicLayout() {
-  const { t } = useTranslation();
-
   return (
     <div className={styles.publicLayoutContainer}>
       <nav className={styles.nav}>
