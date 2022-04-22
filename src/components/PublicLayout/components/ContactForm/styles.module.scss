@@ -1,0 +1,9 @@
+.contactFormContainer {
+  & .textarea {
+    height: 150px;
+  }
+
+  & .button {
+    width: 185px;
+  }
+}

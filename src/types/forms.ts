@@ -16,3 +16,8 @@ export interface LoginFields {
   email: string;
   password: string;
 }
+
+export interface ContactFields {
+  email: string;
+  body: string;
+}

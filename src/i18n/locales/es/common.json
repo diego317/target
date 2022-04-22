@@ -1,4 +1,28 @@
 {
   "about": "ACERCA DE",
-  "contact": "CONTACTO"
+  "contact": "CONTACTO",
+  "modals": {
+    "contact": {
+      "title": {
+        "form": "No sea tímido, escríbanos.",
+        "success": "Gracias por ponerte en contacto con nosotros",
+        "error": "¡Opps!"
+      },
+      "body": {
+        "success": "Nos pondremos en contacto con usted tan pronto como podamos",
+        "error": "Se ha producido un error al enviar su mensaje"
+      },
+      "fields": {
+        "email": {
+          "title": "CORREO ELECTRÓNICO*"
+        },
+        "message": {
+          "title": "MENSAJE*"
+        }
+      },
+      "button": {
+        "send": "ENVIAR"
+      }
+    }
+  }
 }

@@ -1,4 +1,28 @@
 {
   "about": "ABOUT",
-  "contact": "CONTACT"
+  "contact": "CONTACT",
+  "modals": {
+    "contact": {
+      "title": {
+        "form": "Don't be shy, drop us line!",
+        "success": "Thanks for getting in touch",
+        "error": "Opps!"
+      },
+      "body": {
+        "success": "We'll get back you as soon as we can.",
+        "error": "An error has occurred while sending you message"
+      },
+      "fields": {
+        "email": {
+          "title": "EMAIL*"
+        },
+        "message": {
+          "title": "MESSAGE*"
+        }
+      },
+      "button": {
+        "send": "SEND"
+      }
+    }
+  }
 }

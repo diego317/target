@@ -1,10 +1,16 @@
 .button {
   background-color: var(--color-black);
   color: var(--color-white);
+  cursor: pointer;
   height: 37px;
   letter-spacing: 1.65px;
   line-height: 13px;
   width: 100%;
+
+  &:disabled {
+    background-color: var(--color-silver);
+    cursor: not-allowed;
+  }
 }
 
 .hr {

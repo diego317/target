@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import ReactModal from 'react-modal';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
@@ -18,6 +19,8 @@ import reportWebVitals from './reportWebVitals';
 reportWebVitals();
 
 applyDefaultInterceptors(store, httpClient);
+
+ReactModal.setAppElement('#root');
 
 render(
   <React.StrictMode>
