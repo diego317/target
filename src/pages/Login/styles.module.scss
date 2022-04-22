@@ -1,7 +1,9 @@
 .loginContainer {
   height: 100%;
+  padding: 0 10px;
   margin: 0 auto;
-  width: 321px;
+  max-width: 341px;
+  width: 100%;
 
   & .subtitle {
     line-height: 32px;

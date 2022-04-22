@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { SubmitHandler } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ function Login() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { status, error } = useStatus(login);
-  const [loading, setLoading] = useState(false);
+  const isLoading = status === PENDING;
   const { t } = useTranslation('login');
 
   const handleSubmit: SubmitHandler<LoginFields> = (data: LoginFields) => {
@@ -30,7 +30,6 @@ function Login() {
     if (status === FULFILLED) {
       navigate(routesPaths.home);
     }
-    setLoading(status === PENDING);
   }, [navigate, status])
 
   return (
@@ -51,7 +50,7 @@ function Login() {
       <div className="title-small bold">{t('links.facebook')}</div>
       <hr className="hr"/>
       <Link to={routesPaths.signUp} className="text-normal medium">{t('links.signUp')}</Link>
-      {loading && <Spinner />}
+      {isLoading && <Spinner />}
     </div>
   )
 }
