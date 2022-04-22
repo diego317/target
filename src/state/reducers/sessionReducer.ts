@@ -2,14 +2,16 @@ import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 import { updateSession, logoutFulfilled, loginFulfilled } from 'state/actions/userActions';
 import { loginResponse } from 'types/services';
 
+interface UserState {
+  uid: string;
+  email: string;
+  username: string;
+}
+
 export interface SessionState {
   accessToken?: string;
   authenticated: boolean;
-  user: {
-    uid: string;
-    email: string;
-    username: string;
-  }
+  user: UserState
 }
 
 const initialState: SessionState = {
