@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import clsx from 'clsx';
@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 function Menu() {
   const [open, setOpen] = useState<boolean>(false);
-  let timerId: NodeJS.Timeout | null = null;
+  const timerId = useRef<NodeJS.Timeout | null>(null);
   const { t } = useTranslation();
 
   const handleMenu = () => {
@@ -16,12 +16,12 @@ function Menu() {
   }
 
   const handleBlur = () =>  {    
-    timerId = setTimeout(() => setOpen(false)); 
+    timerId.current = setTimeout(() => setOpen(false)); 
    }
 
    const handleFocus = () => {
-     if (timerId) {
-       clearTimeout(timerId);
+     if (timerId.current) {
+       clearTimeout(timerId.current);
      }
    }
 
