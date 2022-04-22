@@ -1,10 +1,10 @@
 import httpClient from 'httpClient';
 import { ENDPOINTS } from 'httpClient/constants';
-import { SignUpFields } from 'types/forms';
+import { SignUpFields, LoginFields } from 'types/forms';
 
 class UserService {
-  static login(user: any) {
-    return httpClient.post(ENDPOINTS.login, user);
+  static login(user: LoginFields) {
+    return httpClient.post(ENDPOINTS.login, { user });
   }
 
   static logout() {

@@ -16,7 +16,7 @@ function SignUpForm({ onSubmit, error }: SignUpFormProps) {
   const password = watch('password');
 
   return (
-    <form className={clsx(styles.signUpForm, "m-bottom-6")} onSubmit={handleSubmit(onSubmit)}>
+    <form className={styles.signUpForm} onSubmit={handleSubmit(onSubmit)}>
       <h1 className={clsx(styles.header, "title-big center bold m-bottom-7")}>{t('signUp:title')}</h1>
       <TextField 
         register={register}

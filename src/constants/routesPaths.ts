@@ -1,7 +1,8 @@
-const routes = {
-  index: '/',
-  login: 'login',
-  signUp: 'sign-up'
+const routesPaths = {
+  home: '/home',
+  landing: '/',
+  login: '/login',
+  signUp: '/sign-up',
 };
 
-export default routes;
+export default routesPaths;

@@ -11,3 +11,8 @@ export interface SignUpFields {
   password: string;
   confirmPassword: string;
 };
+
+export interface LoginFields {
+  email: string;
+  password: string;
+}

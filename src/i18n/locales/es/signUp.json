@@ -5,7 +5,7 @@
       "title": "NOMBRE"
     },
     "email": {
-      "title": "CORREO ELECTRONICO"
+      "title": "CORREO ELECTRÓNICO"
     },
     "password": {
       "title": "CONTRASEÑA",
@@ -28,6 +28,6 @@
     "signUp": "REGISTRAR"
   },
   "link": {
-    "login": "INICIA SESION"
+    "login": "INICIA SESIÓN"
   }
 }
