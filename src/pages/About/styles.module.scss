@@ -1,0 +1,21 @@
+.aboutContainer {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 517px;
+
+  & .title {
+    line-height: 21px;
+  }
+
+  & .body {
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  & .buttonLink {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    height: 37px;
+    width: 180px;
+  }
+}

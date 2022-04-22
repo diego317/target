@@ -5,6 +5,7 @@ import PublicLayout from 'components/PublicLayout';
 import SignUp from 'pages/SignUp';
 import Login from 'pages/Login';
 import Home from 'pages/Home';
+import About from 'pages/About';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
       {
         path: routesPaths.signUp.substring(1),
         element: <SignUp />
+      },
+      {
+        path: routesPaths.about.substring(1),
+        element: <About />
       },
     ]
   },

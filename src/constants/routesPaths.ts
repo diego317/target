@@ -1,4 +1,5 @@
 const routesPaths = {
+  about: '/about',
   home: '/home',
   landing: '/',
   login: '/login',
